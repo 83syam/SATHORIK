@@ -1,0 +1,253 @@
+/* =================================
+   SATHORIK - BLACK GOLD DESIGN
+================================= */
+
+:root {
+  --black: #050507;
+  --gold: #D4AF37;
+  --gold-light: #F5D77A;
+  --white: #FFFFFF;
+  --muted: #A7A7A7;
+  --glass: rgba(255, 255, 255, 0.045);
+  --border: rgba(212, 175, 55, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: var(--white);
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(212, 175, 55, 0.15),
+      transparent 40%
+    ),
+    var(--black);
+}
+
+/* HEADER */
+
+.header {
+  width: 100%;
+  padding: 22px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid var(--border);
+  background: rgba(5, 5, 7, 0.85);
+}
+
+.brand {
+  text-align: center;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 38px;
+  font-weight: bold;
+  color: var(--gold-light);
+
+  border: 2px solid var(--gold);
+  transform: rotate(45deg);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.25);
+}
+
+.logo {
+  margin-bottom: 14px;
+}
+
+.brand-name {
+  color: var(--gold);
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.brand-caption {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.trial-badge {
+  padding: 10px 16px;
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* MAIN */
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 55px 20px;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.gold-text {
+  color: var(--gold);
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+
+.welcome h1 {
+  margin: 15px 0;
+  font-size: clamp(35px, 8vw, 65px);
+  letter-spacing: 8px;
+  color: var(--gold-light);
+  text-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+}
+
+.welcome p:last-child {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* LOGIN */
+
+.login-section {
+  max-width: 750px;
+  margin: auto;
+  padding: 30px;
+
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  backdrop-filter: blur(18px);
+}
+
+.login-section h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--gold-light);
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.login-card {
+  min-height: 145px;
+  padding: 20px 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--white);
+  background: rgba(212, 175, 55, 0.06);
+
+  border: 1px solid var(--border);
+  border-radius: 15px;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.login-card span {
+  font-size: 30px;
+  color: var(--gold);
+}
+
+.login-card strong {
+  color: var(--gold-light);
+  font-size: 13px;
+}
+
+.login-card small {
+  color: var(--muted);
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  background: rgba(212, 175, 55, 0.15);
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.15);
+}
+
+.login-card:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 4px;
+}
+
+.status {
+  margin-top: 25px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 25px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--gold);
+}
+
+footer small {
+  display: block;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container {
+    padding: 40px 15px;
+  }
+
+  .login-section {
+    padding: 20px 12px;
+  }
+
+  .login-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card {
+    min-height: 110px;
+  }
+
+  .welcome {
+    margin-bottom: 35px;
+  }
+
+}
